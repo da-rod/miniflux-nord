@@ -1,0 +1,372 @@
+:root {
+  /*
+  Nord palette copied here to avoid an "import".
+  Source: https://github.com/nordtheme/nord/blob/develop/src/nord.css
+  */
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+
+  --nord1-sec: #3b425273;
+  --nord4-sec: #d8dee97d;
+  --nord4-ter: #d8dee9ab;
+  --nord9-sec: #81a1c1cd;
+  --nord10-sec: #5e81acde;
+  --nord11-sec: #bf616a1c;
+  --nord12-sec: #d0877082;
+
+  --font-family: system-ui, -apple-system, ui-sans-serif, sans-serif;
+  --body-color: var(--nord1);
+  --body-background: var(--nord6);
+  --hr-border-color: var(--nord3);
+  --title-color: var(--nord1);
+  --link-color: var(--nord7);
+  --link-focus-color: var(--nord9);
+  --link-hover-color: var(--nord10);
+  --link-visited-color: var(--nord15);
+
+  --header-list-border-color: var(--nord2);
+  --header-link-color: var(--nord10);
+  --header-link-focus-color: var(--nord3);
+  --header-link-hover-color: var(--nord3);
+  --header-active-link-color: var(--nord7);
+
+  --page-header-title-border-color: var(--nord3);
+
+  --logo-color: var(--nord0);
+  --logo-hover-color-span: var(--nord0);
+
+  --table-border-color: var(--nord4);
+  --table-th-background: var(--nord5);
+  --table-th-color: var(--nord3);
+  --table-tr-hover-background-color: var(--nord6);
+  --table-tr-hover-color: var(--nord3);
+
+  --button-primary-border-color: var(--nord10);
+  --button-primary-background: var(--nord8);
+  --button-primary-color: var(--nord6);
+  --button-primary-focus-border-color: var(--nord10);
+  --button-primary-focus-background: var(--nord9);
+
+  --input-border: 1px solid var(--nord4);
+  --input-background: var(--nord5);
+  --input-color: var(--nord1);
+  --input-placeholder-color: var(--nord5);
+
+  --input-focus-color: var(--nord0);
+  --input-focus-border-color: var(--nord10);
+  --input-focus-box-shadow: 0 0 8px var(--nord9);
+
+  --alert-color: var(--nord3);
+  --alert-background-color: var(--nord13);
+  --alert-border-color: var(--nord12);
+
+  --alert-success-color: var(--nord3);
+  --alert-success-background-color: var(--nord14);
+  --alert-success-border-color: var(--nord7);
+
+  --alert-error-color: var(--nord11);
+  --alert-error-background-color: var(--nord4);
+  --alert-error-border-color: var(--nord12);
+
+  --alert-info-color: var(--nord10);
+  --alert-info-background-color: var(--nord4);
+  --alert-info-border-color: var(--nord9);
+
+  --panel-background: var(--nord5);
+  --panel-border-color: var(--nord4);
+  --panel-color: var(--nord3);
+
+  --modal-background: var(--nord4);
+  --modal-color: var(--nord3);
+  --modal-box-shadow: 0 0 10px var(--nord5);
+
+  --pagination-link-color: var(--nord9);
+  --pagination-border-color: var(--nord4);
+
+  --category-color: var(--nord3);
+  --category-background-color: var(--nord9);
+  --category-border-color: var(--nord10);
+  --category-link-color: var(--nord1);
+  --category-link-hover-color: var(--nord2);
+
+  --category-has-unread-background-color: var(--nord4);
+  --category-has-unread-border-style: dotted;
+  --category-has-unread-border-color: var(--nord3);
+
+  --item-border-color: var(--nord4);
+  --item-padding: 4px;
+  --item-title-link-font-weight: 400;
+
+  --item-status-read-title-link-color: var(--nord10);
+  --item-status-read-title-focus-color: var(--nord9);
+
+  --item-meta-focus-color: var(--nord9);
+  --item-meta-li-color: var(--nord8);
+
+  --current-item-border-width: 2px;
+  --current-item-border-color: var(--nord9);
+  --current-item-box-shadow: 0 0 8px var(--nord9);
+
+  --entry-header-border-color: var(--nord4);
+  --entry-header-title-link-color: var(--nord2);
+  --entry-content-color: var(--nord3);
+  --entry-content-code-color: var(--nord2);
+  --entry-content-code-background: var(--nord5);
+  --entry-content-code-border-color: var(--nord4);
+  --entry-content-quote-color: var(--nord3);
+  --entry-content-abbr-border-color: var(--nord3);
+  --entry-content-aside-border-color: var(--nord3);
+  --entry-enclosure-border-color: var(--nord3);
+
+  --parsing-error-color: var(--nord1);
+  --feed-parsing-error-background-color: var(--nord11-sec);
+  --feed-parsing-error-border-style: solid;
+  --feed-parsing-error-border-color: var(--nord11);
+
+  --feed-has-unread-background-color: var(--nord4);
+  --feed-has-unread-border-style: dotted;
+  --feed-has-unread-border-color: var(--nord5);
+
+  --keyboard-shortcuts-li-color: var(--nord3);
+
+  --counter-color: var(--nord3);
+}
+
+.item {
+  background-color: var(--nord5);
+}
+
+.item-meta a,
+ul.item-meta-icons li> :is(a, button) {
+  color: var(--nord9);
+}
+
+.item-meta a:hover,
+.item-meta button:hover,
+.item-meta a:focus,
+.item-meta button:focus {
+  color: var(--nord10);
+}
+
+.entry-date,
+.entry-meta,
+.entry-website a {
+  color: var(--nord10);
+}
+
+.entry-content figcaption {
+  color: var(--nord5);
+}
+
+.button:disabled {
+  background: var(--nord4);
+  color: var(--nord3);
+}
+
+html {
+  color-scheme: light;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --body-color: var(--nord6);
+    --body-background: var(--nord0);
+    --hr-border-color: var(--nord3);
+    --title-color: var(--nord6);
+    --link-color: var(--nord7);
+    --link-focus-color: var(--nord9);
+    --link-hover-color: var(--nord9);
+    --link-visited-color: var(--nord15);
+
+    --header-list-border-color: var(--nord3);
+    --header-link-color: var(--nord9);
+    --header-link-focus-color: var(--nord9-sec);
+    --header-link-hover-color: var(--nord9-sec);
+    --header-active-link-color: var(--nord7);
+
+    --page-header-title-color: var(--nord8);
+    --page-header-title-border-color: var(--nord3);
+
+    --logo-color: #bbb;
+    --logo-hover-color-span: #bbb;
+
+    --table-border-color: var(--nord3);
+    --table-th-background: var(--nord1);
+    --table-th-color: var(--nord6);
+    --table-tr-hover-background-color: var(--nord1);
+    --table-tr-hover-color: var(--nord6);
+
+    --button-primary-border-color: var(--nord8);
+    --button-primary-background: var(--nord10);
+    --button-primary-color: var(--nord6);
+    --button-primary-focus-border-color: var(--nord9);
+    --button-primary-focus-background: var(--nord3);
+
+    --input-border: 1px solid var(--nord3);
+    --input-background: var(--nord1);
+    --input-color: var(--nord5);
+    --input-placeholder-color: var(--nord4-ter);
+
+    --input-focus-color: var(--nord6);
+    --input-focus-border-color: rgba(129, 161, 193, 0.8);
+    --input-focus-box-shadow: 0 0 8px rgba(129, 161, 193, 0.6);
+
+    --alert-color: var(--nord6);
+    --alert-background-color: var(--nord1);
+    --alert-border-color: var(--nord2);
+
+    --alert-success-color: var(--nord14);
+    --alert-success-background-color: var(--nord1);
+    --alert-success-border-color: var(--nord2);
+
+    --alert-error-color: var(--nord11);
+    --alert-error-background-color: var(--nord1);
+    --alert-error-border-color: var(--nord2);
+
+    --alert-info-color: var(--nord6);
+    --alert-info-background-color: var(--nord1);
+    --alert-info-border-color: var(--nord2);
+
+    --panel-background: var(--nord1);
+    --panel-border-color: var(--nord3);
+    --panel-color: var(--nord4);
+
+    --modal-background: var(--nord1);
+    --modal-color: var(--nord5);
+    --modal-box-shadow: 0 0 10px rgba(136, 192, 208, 0.6);
+
+    --pagination-link-color: var(--nord9);
+    --pagination-border-color: var(--nord3);
+
+    --category-color: var(--nord6);
+    --category-background-color: var(--nord2);
+    --category-border-color: var(--nord3);
+    --category-link-color: #999;
+    --category-link-hover-color: #aaa;
+
+    --category-has-unread-background-color: var(--nord1);
+    --category-has-unread-border-style: solid;
+    --category-has-unread-border-color: var(--nord3);
+
+    --item-border-color: var(--nord2);
+    --item-padding: 4px;
+    --item-title-link-font-weight: 400;
+
+    --item-status-read-title-link-color: var(--nord10-sec);
+    --item-status-read-title-focus-color: rgba(82, 168, 236, 0.6);
+
+    --item-meta-focus-color: var(--nord6);
+    --item-meta-li-color: var(--nord4);
+
+    --current-item-border-width: 2px;
+    --current-item-border-color: rgba(82, 168, 236, 0.8);
+    --current-item-box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+
+    --entry-header-border-color: var(--nord3);
+    --entry-header-title-link-color: var(--nord7);
+    --entry-content-color: var(--nord4);
+    --entry-content-code-color: var(--nord6);
+    --entry-content-code-background: var(--nord1);
+    --entry-content-code-border-color: var(--nord3);
+    --entry-content-quote-color: #777;
+    --entry-content-abbr-border-color: #777;
+    --entry-enclosure-border-color: var(--nord3);
+
+    --parsing-error-color: var(--nord6);
+    --feed-parsing-error-background-color: var(--nord11-sec);
+    --feed-parsing-error-border-style: solid;
+    --feed-parsing-error-border-color: var(--nord12-sec);
+
+    --feed-has-unread-background-color: var(--nord1);
+    --feed-has-unread-border-style: solid;
+    --feed-has-unread-border-color: var(--nord3);
+    --keyboard-shortcuts-li-color: var(--nord4-ter);
+
+    --counter-color: var(--nord4);
+  }
+
+  .item {
+    background-color: var(--nord1-sec);
+  }
+
+  .item-meta a,
+  ul.item-meta-icons li> :is(a, button) {
+    color: var(--nord9);
+  }
+
+  .item-meta a:hover,
+  .item-meta button:hover,
+  .item-meta a:focus,
+  .item-meta button:focus {
+    color: var(--nord10);
+  }
+
+  .entry-date,
+  .entry-meta,
+  .entry-website a {
+    color: var(--nord10);
+  }
+
+  .entry-content figcaption {
+    color: var(--nord4-sec);
+  }
+
+  .button:disabled {
+    background: var(--nord1);
+    color: var(--nord3);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
+.confirm,
+.confirm a,
+.confirm button {
+  color: var(--alert-error-color);
+}
+
+.entry header h1 a:hover,
+.entry header h1 a:focus {
+  color: var(--link-focus-color);
+}
+
+.error-feeds-counter-wrapper {
+  color: var(--alert-error-color);
+}
+
+.header li a:hover {
+  color: var(--header-link-hover-color);
+}
+
+.item.item-status-unread {
+  background-color: var(--feed-has-unread-background-color);
+}
+
+.page-header h1 a:hover,
+.page-header h1 a:focus {
+  color: var(--link-focus-color);
+}
+
+select {
+  background: var(--input-background);
+  border-color: var(--input-focus-border-color);
+  border: var(--input-border);
+  color: var(--input-color);
+  padding: 3px;
+}
